@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>upload</h3>
+    <form action="/upload" enctype="multipart/form-data" method="post">
+      <input type="file" name="attachments" multiple>
+      <input name="title" type="text" placeholder="제목"/><br />
+      <input name="content" type="text" placeholder="내용"/><br />
+      <input name="tag" type="text" placeholder="태그"/><br />
+      <input name="user_id" type="text" placeholder="글쓴이"/><br />
+      <input name="price" type="text" placeholder="가격"/><br />
+      <button type="submit" class="btn btn-primary">Uploading</button>
+    </form>
+    <br>
+    <br>
+    <form action="/logout" method="post">
+      <button type = "submit">로그아웃</button>
+    </form>
+    <br>
+    <br>
+    </form>
+    <form action="/delete" method="post">        
+      <input name="board_id_d" type="text" placeholder="삭제할 게시글번호"/><br />
+      <button type = "submit">삭제</button>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <form action="/update" method="post">
+        <input name="board_id_u" type="text" placeholder="게시글번호"/><br />
+        <input name="title_u" type="text" placeholder="제목"/><br />
+        <input name="content_u" type="text" placeholder="내용"/><br />
+        <input name="tag_u" type="text" placeholder="태그"/><br />
+        <input name="price_u" type="text" placeholder="가격"/><br />
+        <button type="submit" class="btn btn-primary">update</button>
+      </form>
+      <br><br><br>
+      <form action="/select" method="post">        
+        <input name="comment_id" type="text" placeholder="선택할 댓글번호"/><br />
+        <button type = "submit">선택</button>
+      </form>
+</body>
+</html>
